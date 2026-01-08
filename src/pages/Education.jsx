@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 const Education = () => {
+    useEffect(() => {
+        document.title = "Vikas Sharma - Education";
+    }, []);
+
     const Education = [
         {
             collage: "IIMT University",

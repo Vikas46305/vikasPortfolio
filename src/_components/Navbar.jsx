@@ -15,10 +15,6 @@ function Navbar() {
             link: "/skill",
         },
         {
-            name: "Experience",
-            link: "/experience",
-        },
-        {
             name: "Project",
             link: "/project",
         },
@@ -33,15 +29,16 @@ function Navbar() {
     return (
         <div
             className="bg-white/20 absolute right-7 p-5 md:flex items-center justify-end gap-8 w-fit font-semibold hidden"
-            style={{ borderRadius: "0 17px", }}
+            style={{ borderRadius: "0 17px" }}
         >
             {Links.map((data, index) => (
                 <div key={index}>
                     <NavLink
                         to={data.link}
-                        className={`${data.link === location.pathname &&
+                        className={`${
+                            data.link === location.pathname &&
                             "text-orange-300 font-serif"
-                            }`}
+                        }`}
                     >
                         {data.name}
                     </NavLink>

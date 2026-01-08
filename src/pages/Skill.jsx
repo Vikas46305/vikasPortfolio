@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Skill = () => {
+
+    useEffect(() => {
+            document.title = "Vikas Sharma - Skill";
+        }, []);
+
     const Skill = [
         {
             Frontend: [

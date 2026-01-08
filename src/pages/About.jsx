@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const About = () => {
+    useEffect(() => {
+        document.title = "Vikas Sharma - About";
+    }, []);
+
     const CardItem = [
         {
             icon: <i class="ri-figma-line"></i>,
@@ -32,13 +36,13 @@ const About = () => {
             <div className="my-4 space-y-2">
                 <h1>Hey, I am Vikas Sharma!</h1>
                 <p>
-                    I'm a passionate MERN stack developer focused on building
-                    interactive, responsive web applications. I’ve worked on
-                    personal and academic projects using MongoDB, Express.js,
-                    React.js, and Node.js. I enjoy creating user-friendly
-                    experiences with clean design, smooth animations, and
-                    seamless transitions. Committed to continuous learning, I
-                    strive to deliver impactful, modern web solutions.
+                    I'm a passionate MERN Stack Developer with hands-on
+                    experience in building responsive and user-friendly web
+                    applications using MongoDB, Express.js, React.js, and
+                    Node.js. Completed a 6-month Training-cum-Internship at
+                    CETPA Infotech, Noida, gaining practical exposure to
+                    real-world full-stack development. Passionate about clean
+                    design, smooth user experiences, and continuous learning.
                 </p>
             </div>
 

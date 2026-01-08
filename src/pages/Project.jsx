@@ -1,6 +1,11 @@
+import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom'
 
 const Project = () => {
+
+    useEffect(() => {
+            document.title = "Vikas Sharma - Project";
+        }, []);
 
     const Project = [
         {

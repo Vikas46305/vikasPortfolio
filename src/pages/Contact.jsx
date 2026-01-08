@@ -1,49 +1,51 @@
 import { Button } from "@/components/ui/button";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Contact = () => {
+    useEffect(() => {
+        document.title = "Vikas Sharma - Contact";
+    }, []);
 
     const [data, setData] = useState({
         name: "",
         email: "",
-        message: ""
-    })
+        message: "",
+    });
 
-    const nameRef = useRef(null)
-    const emailRef = useRef(null)
-    const messageRef = useRef(null)
+    const nameRef = useRef(null);
+    const emailRef = useRef(null);
+    const messageRef = useRef(null);
 
     const onSubmit = (e) => {
-        e?.preventDefault()
+        e?.preventDefault();
         if (data.name.trim().length === 0) {
-            return nameRef.current.focus()
+            return nameRef.current.focus();
         }
         if (data.email.trim().length === 0) {
-            return emailRef.current.focus()
+            return emailRef.current.focus();
         }
         if (data.message.trim().length === 0 || data.message.length < 100) {
-            return messageRef.current.focus()
+            return messageRef.current.focus();
         }
         return setData({
             name: "",
             email: "",
-            message: ""
-        })
-    }
+            message: "",
+        });
+    };
 
     const HandleKeyDownEvent = (e) => {
         if (e.code === "Enter" || e.code === "NumpadEnter") {
             return onSubmit();
         }
-
-    }
+    };
 
     const onChange = (value, field) => {
         setData({
             ...data,
-            [field]: value
-        })
-    }
+            [field]: value,
+        });
+    };
 
     return (
         <div>
@@ -53,7 +55,11 @@ const Contact = () => {
             </div>
 
             <div className="my-5">
-                <form onKeyDown={HandleKeyDownEvent} className="space-y-2" onSubmit={onSubmit}>
+                <form
+                    onKeyDown={HandleKeyDownEvent}
+                    className="space-y-2"
+                    onSubmit={onSubmit}
+                >
                     <div className="grid items-center gap-3 my-3 grid-cols-1 md:grid-cols-2">
                         <input
                             type="text"
@@ -83,21 +89,19 @@ const Contact = () => {
                             placeholder="Write your message in 150 words"
                             className="w-full h-24 bg-white/10 rounded-xl p-4 focus:outline-none border border-transparent focus:border-indigo-500"
                             value={data.message}
-                            onChange={(e) => onChange(e.target.value, "message")}
+                            onChange={(e) =>
+                                onChange(e.target.value, "message")
+                            }
                             ref={messageRef}
-                        >
-                        </textarea>
+                        ></textarea>
                     </div>
-                    <div >
-                        <Button
-                            variant="outline"
-                            type="submit">
+                    <div>
+                        <Button variant="outline" type="submit">
                             Send Message
                         </Button>
                     </div>
                 </form>
             </div>
-
         </div>
     );
 };

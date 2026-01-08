@@ -25,10 +25,6 @@ const Aside = () => {
             link: "/skill",
         },
         {
-            name: "Experience",
-            link: "/experience",
-        },
-        {
             name: "Project",
             link: "/project",
         },
@@ -97,7 +93,7 @@ const Aside = () => {
                     <div className="bg-white/20 w-full p-1.5 text-center rounded-lg">
                         <NavLink
                             target="_blank"
-                            to='https://drive.google.com/file/d/1uViPGfiKSl0LcjFe-_3Od20pNsJ-aFY0/view?usp=sharing' variant="outline">
+                            to='https://drive.google.com/file/d/1goEi9n7t4VDyV2_hW1mVwbGBv4TEByb4/view?usp=drive_link' variant="outline">
                             View Resume
                             <i className="ri-eye-line ml-2"></i>
                         </NavLink>
@@ -147,7 +143,7 @@ const Aside = () => {
                                 <div className="bg-white/20 w-full p-1.5 text-center rounded-lg">
                                     <NavLink
                                         target="_blank"
-                                        to='https://drive.google.com/file/d/1uViPGfiKSl0LcjFe-_3Od20pNsJ-aFY0/view?usp=sharing' variant="outline">
+                                        to='https://drive.google.com/file/d/1goEi9n7t4VDyV2_hW1mVwbGBv4TEByb4/view?usp=drive_link' variant="outline">
                                         View Resume
                                         <i className="ri-eye-line ml-2"></i>
                                     </NavLink>
