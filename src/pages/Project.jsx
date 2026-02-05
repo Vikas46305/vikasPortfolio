@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Project = () => {
 
@@ -43,8 +43,8 @@ const Project = () => {
                             <div className='flex gap-5'>
                                 <div><i class="ri-arrow-right-double-fill"></i></div>
                                 <div className='flex items-center gap-2'>
-                                    <p>Github Link : </p>
-                                    <NavLink target='_blank' className="hover:text-indigo-500" to={data.github}>{data.github}</NavLink>
+                                    <p>Github  : </p>
+                                    <Link target='_blank' className="hover:text-indigo-500" to={data.github}>{data.github}</Link>
                                 </div>
                             </div>
                             {
@@ -53,8 +53,8 @@ const Project = () => {
                                         <i class="ri-arrow-right-double-fill"></i>
                                     </div>
                                     <div className='flex items-center gap-2'>
-                                        <p>Live Link : </p>
-                                        <NavLink target='_blank' className="hover:text-indigo-500" to={data.live}>{data.live}</NavLink>
+                                        <p>Live  : </p>
+                                        <Link target='_blank' className="hover:text-indigo-500" to={data.live}>{data.live}</Link>
                                     </div>
                                 </div>
                             }
