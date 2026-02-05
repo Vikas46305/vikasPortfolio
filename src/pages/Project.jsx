@@ -43,7 +43,14 @@ const Project = () => {
                                 <div><i class="ri-arrow-right-double-fill"></i></div>
                                 <div className='flex items-center gap-2'>
                                     <p>Github  : </p>
-                                    <a href={data.github} target='_blank' className="hover:text-indigo-500">{data.github}</a>
+                                    <a
+  href={`https://${data.github}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:text-indigo-500"
+>
+  {data.github}
+</a>
                                 </div>
                             </div>
                             {
@@ -53,7 +60,14 @@ const Project = () => {
                                     </div>
                                     <div className='flex items-center gap-2'>
                                         <p>Live  : </p>
-                                        <a href={data.github} target='_blank' className="hover:text-indigo-500">{data.live}</a>
+                                        <a
+  href={`https://${data.live}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:text-indigo-500"
+>
+  {data.live}
+</a>
                                     </div>
                                 </div>
                             }
