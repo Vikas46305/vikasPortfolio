@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom'
 
 const Project = () => {
 
@@ -44,7 +43,7 @@ const Project = () => {
                                 <div><i class="ri-arrow-right-double-fill"></i></div>
                                 <div className='flex items-center gap-2'>
                                     <p>Github  : </p>
-                                    <Link target='_blank' className="hover:text-indigo-500" to={data.github}>{data.github}</Link>
+                                    <a href={data.github} target='_blank' className="hover:text-indigo-500">{data.github}</a>
                                 </div>
                             </div>
                             {
@@ -54,7 +53,7 @@ const Project = () => {
                                     </div>
                                     <div className='flex items-center gap-2'>
                                         <p>Live  : </p>
-                                        <Link target='_blank' className="hover:text-indigo-500" to={data.live}>{data.live}</Link>
+                                        <a href={data.github} target='_blank' className="hover:text-indigo-500">{data.live}</a>
                                     </div>
                                 </div>
                             }
